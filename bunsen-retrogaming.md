@@ -34,16 +34,16 @@ Follow instructions for compiling and installing [RetroPie](https://retropie.org
 
 ## 4. Make Linux more friendly
 
-1. Power management / screensaver
-Applications > Settings > Power Manager
-- (Display) disable power management
-- (Security) Never lock session
+1. **Power Manager** (Preferences / Power Management)
+   * **General** When power button is pressed: *Shutdown*
+   * **Display** *disable power management*
+   * **Security** *never lock session*
 
-2. Autologin
-https://wiki.debian.org/LightDM#Enable_autologin
+2. **Autologin**
+   * Follow [instructions on wiki.debian.org](https://wiki.debian.org/LightDM#Enable_autologin)
 
-3. Autostart
-Create a .desktop file for emulationstation in /usr/share/applications then copy that file to ~/.config/autostart
+3. **Autostart**
+   *Create a .desktop file for emulationstation in /usr/share/applications then copy that file to ~/.config/autostart
 copy sections of the org.gnome.Terminal.desktop file and change the line that goes Exec=gnome-terminal to Exec=gnome-terminal --command "/?/?/emulationStation".
 
 4. configure Samba
