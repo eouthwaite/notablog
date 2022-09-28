@@ -25,7 +25,8 @@ Objectives:
 ```
 sudo apt-get update
 sudo apt install openssh-server ufw samba
-sudo ufw allow ssh samba
+sudo ufw allow ssh
+sudo ufw allow samba
 ```
 
 ## 3. Compile and Install RetroPie
