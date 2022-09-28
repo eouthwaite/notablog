@@ -31,6 +31,7 @@ sudo ufw allow ssh samba
 ## 3. Compile and Install RetroPie
 
 Follow instructions for compiling and installing [RetroPie](https://retropie.org.uk/)
+- had my PR accepted; Bunsenlabs is now a supported Linux flavour!
 
 ## 4. Make Linux more friendly
 
@@ -43,11 +44,32 @@ Follow instructions for compiling and installing [RetroPie](https://retropie.org
    * Follow [instructions on wiki.debian.org](https://wiki.debian.org/LightDM#Enable_autologin)
 
 3. **Autostart**
-   *Create a .desktop file for emulationstation in /usr/share/applications then copy that file to ~/.config/autostart
-copy sections of the org.gnome.Terminal.desktop file and change the line that goes Exec=gnome-terminal to Exec=gnome-terminal --command "/?/?/emulationStation".
+   * This can be setup from RetroPie config (Setup / Configuration)
+   * Alternatively, create a .desktop file for emulationstation in /usr/share/applications then copy that file to ~/.config/autostart
 
-4. configure Samba
-make a link to the RetroPie ROMS directory
+```
+[Desktop Entry]
+Name=EmulationStation
+Comment=Play games
+Exec=gnome-terminal --command "/usr/bin/emulationstation"
+Path=
+Icon=system-run
+Terminal=true
+Type=Application
+```
+
+4. **Configure Samba**
+   * make a link to the RetroPie ROMS directory
+
+```
+[RetroPie]
+   comment = RetroPie ROMS
+   path = /home/simplesimon/RetroPie/roms
+   guest ok = no
+   browseable = yes
+   valid users = simplesimon
+   read only = no
+```
 
 ## 5. Add Dolphin
 
@@ -56,7 +78,10 @@ Follow instructions for compiling and installing [Dolphin](https://dolphin-emu.o
 ## X. TODO
 
 1. Slow down SNES
-50 FPS output to 60MHz screen
+
+* 50 FPS output to 60MHz screen
+```
 /opt/retropie/configs/all/retroarch.cfg video_vsync = true
+```
 
 2. Add browser to RetroPie?
