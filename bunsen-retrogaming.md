@@ -59,8 +59,10 @@ Terminal=true
 Type=Application
 ```
 
+[Download if feeling lazy](files/EmulationStation.desktop)
+
 4. **Configure Samba**
-   * make a link to the RetroPie ROMS directory
+   * make a link to the RetroPie ROMS directory in /etc/samba/smb.conf
 
 ```
 [RetroPie]
@@ -74,7 +76,15 @@ Type=Application
 
 ## 5. Add Dolphin
 
-Follow instructions for compiling and installing [Dolphin](https://dolphin-emu.org/) (this currently fails due to gcc 9 not being available on Lithium)
+Follow instructions for compiling and installing [Dolphin](https://dolphin-emu.org/) - [This is currently best...](https://wiki.dolphin-emu.org/index.php?title=Building_Dolphin_on_Linux)
+
+For Lithium, I was hoping that this would fix it:
+
+```
+cmake .. -DCMAKE_C_COMPILER=gcc-8 -DCMAKE_CXX_COMPILER=g++-8
+```
+
+but it still refuses to build.
 
 ## X. TODO
 
@@ -83,6 +93,24 @@ Follow instructions for compiling and installing [Dolphin](https://dolphin-emu.o
 * 50 FPS output to 60MHz screen
 ```
 /opt/retropie/configs/all/retroarch.cfg video_vsync = true
+
 ```
 
-2. Add browser to RetroPie?
+* audio sync and vsync ON
+* fast-forward hotkey?
+* Also try checking your refresh rate in display settings to see if it matches your display.
+
+```
+refresh rate is set to 60
+
+It might be the problem here, are you sure you aren't running a PAL version of smb ? Also, which nes core are you using ?
+
+```
+
+2. Install Kodi
+
+Used to be called [XBMC](https://github.com/xbmc/xbmc)
+
+3. Add browser to RetroPie?
+
+

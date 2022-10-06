@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=EmulationStation
+Comment=Play games
+Exec=gnome-terminal --command "/usr/bin/emulationstation"
+Path=
+Icon=system-run
+Terminal=true
+Type=Application
+
