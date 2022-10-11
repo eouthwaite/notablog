@@ -59,8 +59,10 @@ Terminal=true
 Type=Application
 ```
 
+[Download if feeling lazy](files/EmulationStation.desktop)
+
 4. **Configure Samba**
-   * make a link to the RetroPie ROMS directory
+   * make a link to the RetroPie ROMS directory in /etc/samba/smb.conf
 
 ```
 [RetroPie]
@@ -74,15 +76,33 @@ Type=Application
 
 ## 5. Add Dolphin
 
-Follow instructions for compiling and installing [Dolphin](https://dolphin-emu.org/) (this currently fails due to gcc 9 not being available on Lithium)
+Follow instructions for compiling and installing [Dolphin](https://dolphin-emu.org/) - [This is currently best...](https://wiki.dolphin-emu.org/index.php?title=Building_Dolphin_on_Linux)
+
+For Lithium, I was hoping that this would fix it:
+
+```
+cmake .. -DCMAKE_C_COMPILER=gcc-8 -DCMAKE_CXX_COMPILER=g++-8
+```
+
+but it still refuses to build.
+
+## 6. Slow down SNES emulator
+
+Mario Kart is fun when fast, but gets wearing after a few games
+
+Explanation: 50 FPS output to 60MHz screen.
+
+Uncommenting these lines in /opt/retropie/configs/all/retroarch.cfg has helped:
+```
+video_vsync = true
+audio_sync = true
+```
 
 ## X. TODO
 
-1. Slow down SNES
+* Install Kodi
+   * Used to be called [XBMC](https://github.com/xbmc/xbmc)
+   
+* Add browser to RetroPie?
 
-* 50 FPS output to 60MHz screen
-```
-/opt/retropie/configs/all/retroarch.cfg video_vsync = true
-```
 
-2. Add browser to RetroPie?
