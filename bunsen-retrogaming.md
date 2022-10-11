@@ -86,31 +86,23 @@ cmake .. -DCMAKE_C_COMPILER=gcc-8 -DCMAKE_CXX_COMPILER=g++-8
 
 but it still refuses to build.
 
+## 6. Slow down SNES emulator
+
+Mario Kart is fun when fast, but gets wearing after a few games
+
+Explanation: 50 FPS output to 60MHz screen.
+
+Uncommenting these lines in /opt/retropie/configs/all/retroarch.cfg has helped:
+```
+video_vsync = true
+audio_sync = true
+```
+
 ## X. TODO
 
-1. Slow down SNES
-
-* 50 FPS output to 60MHz screen
-```
-/opt/retropie/configs/all/retroarch.cfg video_vsync = true
-
-```
-
-* audio sync and vsync ON
-* fast-forward hotkey?
-* Also try checking your refresh rate in display settings to see if it matches your display.
-
-```
-refresh rate is set to 60
-
-It might be the problem here, are you sure you aren't running a PAL version of smb ? Also, which nes core are you using ?
-
-```
-
-2. Install Kodi
-
-Used to be called [XBMC](https://github.com/xbmc/xbmc)
-
-3. Add browser to RetroPie?
+* Install Kodi
+   * Used to be called [XBMC](https://github.com/xbmc/xbmc)
+   
+* Add browser to RetroPie?
 
 
