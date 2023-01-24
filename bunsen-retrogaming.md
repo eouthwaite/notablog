@@ -13,7 +13,7 @@ AMD E-450 CPU with 6GB RAM
 
 Lithium is fine for compiling and installing [RetroPie](https://retropie.org.uk/); cannot compile current [Dolphin](https://dolphin-emu.org/)
 
-Currently installing [Beryllium](https://github.com/BunsenLabs/bunsen-netinstall)
+Followed instructions for experimental [Beryllium](https://github.com/BunsenLabs/bunsen-netinstall) installation - working perfectly
 
 ## 2. Allow remote connections
 
@@ -86,6 +86,8 @@ cmake .. -DCMAKE_C_COMPILER=gcc-8 -DCMAKE_CXX_COMPILER=g++-8
 
 but it still refuses to build.
 
+Use [Beryllium](https://github.com/BunsenLabs/bunsen-netinstall)!
+
 ## 6. Slow down SNES emulator
 
 Mario Kart is fun when fast, but gets wearing after a few games
@@ -98,11 +100,6 @@ video_vsync = true
 audio_sync = true
 ```
 
-## X. TODO
+## 7. What's next
 
-* Install Kodi
-   * Used to be called [XBMC](https://github.com/xbmc/xbmc)
-   
-* Add browser to RetroPie?
-
-
+[Can I turn this PC into a complete media centre?](./bunsen-kodi.md)  It has a DVD player, and should be easier to stream to than the TV...
