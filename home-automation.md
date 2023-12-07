@@ -11,8 +11,7 @@ Start
 
 ## Setup plugs
 
-* Youtube
-* Gotchas
+[Tasmota Smart Plugs](./ha-tasmota-plugs.md)
 
 ## Setup Hive
 
